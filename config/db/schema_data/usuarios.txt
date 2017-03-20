@@ -1,0 +1,15 @@
+Los usuarios default in la tabla
+
+Admin User 
+
+username: cjarju 
+password: admin 
+
+Normal User 
+
+Username: user
+password: user 
+
+Mysql password expired. Can't connect
+
+ALTER USER `root`@`localhost` IDENTIFIED BY '', `root`@`localhost` PASSWORD EXPIRE NEVER;

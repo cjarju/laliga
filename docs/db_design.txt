@@ -1,0 +1,55 @@
+liga 
+
+ equipos - id, nombre_equipo, web, twitter, facebook, email, telefono, ruta_logo 
+
+ jugadores - id, equipo_id, nombre_jugador, apellidos_jugador, dorsal_jugador, posicion_jugador
+
+ entrenadores - id, equipo_id, nombre, apellidos
+
+ clasificacion - id, equipo_id, puntos, jugados, ganados, empatados, perdidos, goles_a_favor, goles_en_contra
+
+ partidos - id, equipo_local_id, equipo_away_id, goles_equipo_local, goles_equipo_away, fecha_partido
+            - select a home and away team from drop down which will show the team name but pass the team_id 
+            - enter the score beside the two teams
+            - on submit you can insert new row into partidos table
+            - update the two team rows in clasificacion
+
+ estadios - id, equipo_id, nombre_estadio, direccion 
+
+ apuestas - id, partido_id, usuario_id, goles_equipo_1, goles_equipo_2
+
+ usuarios - id, nombre_usuario, password_hash, admin
+
+ default password: try 1234
+
+ noticias - id, titulo, contenido, fecha_noticia, ruta_foto 
+
+any disabled form element will not be sent on submission. readonly attribute does not seem to work on select. 
+You option disable select and enable it on submission using JQuery 
+
+MySql - Get row number on select
+
+SET @rank=0;
+SELECT @rank:=@rank+1 AS rank, itemID, COUNT(*) as ordercount
+  FROM orders
+  GROUP BY itemID
+  ORDER BY ordercount DESC;
+
+After move jquery-ui to admin folder and remove links from user files 
+
+remember to close any connection result statement in php 
+
+live validation (for user signup) password and confirmation 
+
+http://livevalidation.com/examples
+
+form (generate token for forms to avoid XSRF)
+
+validation (PHP)
+test
+newline in news content (nl2br in php)
+
+
+
+
+

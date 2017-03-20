@@ -1,0 +1,627 @@
+/* set box-sizing to border-box */
+
+
+
+* {
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* body */
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #eee;
+    background-image: url('../images/fondo_estadio.jpg');
+}
+
+.content-bgcolor {
+   background-color: #eee;
+}
+
+/* some versions of IE by default, add border to images; remove it */
+img {
+    border-style: none;
+}
+
+
+/* anchor links */
+a {
+    color: #428bca;
+    text-decoration: none;
+}
+
+/* anchor links on hover or focus */
+a:hover, a:focus {
+    color: #2a6496;
+}
+
+
+/* remove the dotted border on anchor links, and other elements, on focus, active, or hover */
+
+:focus, :active, :hover {
+    outline: 0;
+}
+
+/* display options for elements */
+
+.table {
+    display: table;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+}
+
+.block {
+    display: block;
+}
+
+
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+/* width in percentages: for 2 side by side columns */
+
+.wdt-50-per {
+    width: 50%;
+}
+
+.wdt-48-per {
+    width: 48%;
+}
+
+.wdt-50-per, .wdt-48-per  {
+    min-height: 1px;
+    margin:0;
+}
+
+/* custom headings */
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin: 10px 0;
+
+}
+
+
+/* div that contains page contents: will be centered and side padded 15px */
+
+.container {
+    margin: 0 auto; /* top right bottom left (0 auto shortcut for 0 auto 0 auto) */
+    padding: 0 15px;
+    max-width: 770px;
+}
+
+/* page header / menu */
+
+/* div that contains menu contents */
+
+.header {
+    padding: 0 0 10px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: auto; /* will contain floating elements */
+    clear:both;
+}
+
+/* navigation ul */
+.nav {
+    float: right!important;
+    margin: 0 auto;
+    padding-left: 0;
+    list-style: none;
+}
+
+.nav>li {
+    float: left;
+    display: block;
+}
+
+.nav>li+li {
+    margin-left: 2px;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.nav>li.active>a, .nav>li.active>a:hover, .nav>li.active>a:focus {
+    color: #fff;
+    background-color: #428bca;
+}
+
+/* footer */
+
+.footer {
+    margin-top: 15px;
+    border-top: 1px solid #e5e5e5;
+    color: #fff;
+    font-weight: bold;
+    clear: both;
+}
+
+.footer > p {
+    text-align: center;
+}
+
+/* user info section */
+
+.user-info-sect {
+    text-align: center;
+}
+
+.user-info-sect  > span {
+    display: inline-block;
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* notification section */
+.notification-sect-1 {
+    margin: 5px 0 15px 0;
+    text-align:center;
+}
+
+/* color for error messages from server side */
+.error-color {
+    color: #f00;
+}
+
+/* color for notification messages from server side */
+.notification-color {
+    color: #080;
+}
+
+/* ul for validation errors (client side)*/
+.form-error-list {
+    list-style-position: inside;
+    width: 500px;
+    margin: 0 auto;
+    padding-left: 80px;
+    color: #f00;
+    text-align: left;
+}
+
+.hdr-med {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.text-size-small {
+    font-size: 12px;
+}
+
+
+/* HOME/INDEX page */
+
+/* news section - div */
+#news-box {
+    margin: 0 auto;
+    width: 640px;
+    border-radius: 6px;
+}
+
+/* span as block */
+#news-title-box {
+    padding: 15px;
+    font-size:20px;
+    font-weight:bold;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+/* div containing other news headlines */
+#news-list-box {
+    font-size: 13px;
+    /*text-align: justify;*/
+    padding: 15px;
+}
+
+/* first news box */
+#news-list-box > div:first-child {
+    padding-right: 10px;
+    padding-left: 0;
+    border-left: none; /* override the sibling setting below */
+}
+
+/* sibling of current */
+#news-list-box div + div {
+    border-left: 2px solid #e5e5e5;
+    padding-left: 10px;
+}
+
+/* equipos and clasificacion section */
+
+/* box containing other boxes */
+
+#sections-box-1 {
+    margin-top: 10px;
+    padding: 0;
+    min-height: 330px;
+}
+
+/* side by side boxes equipos and clasificacion */
+
+.sections-1 {
+    padding-left: 10px;
+    min-height: 328px;
+    border-radius: 6px;
+ }
+
+/* equipos logos on home page */
+
+.equipo-logo-home {
+    margin: 6px;
+}
+
+/* EQUIPOS page */
+
+/* main div */
+#equipos-main-div {
+    width: 700px;
+    margin: 0 auto;
+}
+
+/* box containing logos of equipos (list) */
+#equipos-logos {
+    margin-bottom: 15px;
+    padding: 0 5px;
+    border-radius: 6px;
+}
+
+#equipos-logos img {
+    margin-right: 15px;
+}
+
+#equipo-box {
+
+}
+
+/* box containing logo and team info */
+#equipo-info {
+    min-height: 380px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* class for logo and info cols */
+.sections-2 {
+}
+
+/* equipo logo col */
+#logo-col {
+    text-align: center;
+}
+
+/* equipo info col */
+#info-col {
+    padding-left: 15px;
+    border-left: 1px dotted #333;
+}
+
+/* box containing equipo info tables: jugadores, partidos, clasificacion */
+.equipo-info-tbl-box {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+/* tables in equipos page */
+.equipo-info-tbl td {
+    padding: 1px 16px 1px 16px;
+}
+
+/* CLASIFICACION page */
+
+.tiny-logo {
+    vertical-align:middle;
+}
+
+#clasificacion-box{
+    /*border:1px solid red;*/
+    padding: 15px;
+    border-radius: 6px;
+
+}
+
+#clasificacion-box h1 {
+    text-align: center;
+}
+
+
+#clasificacion-small td {
+    padding: 1px 10px;
+    font-size: 11px;
+}
+
+
+#clasificacion-grande td {
+    padding: 1px 16px;
+    font-size: 12px;
+}
+
+/* PARTIDOS page */
+
+#partidos-box {
+    border-radius: 6px;
+    padding: 15px;
+}
+
+#partidos-box h1 {
+    text-align: center;
+}
+
+#partidos-table td {
+    padding: 1px 16px;
+}
+
+/* NOTICIAS page */
+
+.all-new-container {
+    width:640px;
+    margin: 0 auto;
+}
+
+#current-news {
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+#current-news-img-box {
+    text-align: center;
+}
+
+#current-news-text {
+    padding: 0 5px 5px;
+    text-align: justify;
+}
+
+.news-date {
+    font-size:10px;
+    margin-bottom:10px;
+}
+
+.news-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-content {
+    font-size: 12px;
+
+}
+
+#all-news {
+    border-radius: 6px;
+    padding:0 5px;
+
+}
+
+.noticias-box{
+    border-bottom: 1px solid #808080;
+    padding: 10px 0;
+    overflow: auto;
+    text-align: justify;
+    font-size: 12px;
+}
+
+.noticia-side-foto{
+    float: left;
+    padding-right: 10px;
+}
+
+.el-titulo-noticia {
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.short-description {
+    /*font-size: 11px;*/
+}
+
+/* APUESTAS page */
+
+.apuestas-main-div {
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.apuestas-main-div > h1 {
+    text-align: center;
+}
+
+#apuesta-form-box {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    display: none;
+}
+
+#apuesta-form-box input[type="text"] {
+    width: 25px;
+}
+
+#bet-table td {
+    padding: 1px 16px;
+}
+
+/* SIGNIN and SIGNUP pages */
+
+/* form sign in sign up */
+.form-signin-up {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: #eee;
+
+}
+
+.form-signin-up-heading {
+    margin-bottom: 10px;
+}
+
+.input-text, .input-password  {
+    margin-bottom: 5px;
+    position: relative;
+    padding: 10px;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    color: #555;
+    border: 1px solid #00bfff;
+    border-radius: 4px;
+}
+
+.input-text:focus, .input-password:focus {
+    color: #000;
+    border: 1px solid blue;
+}
+
+.goles_apuesta {
+    color: #555;
+    border: 1px solid #00bfff;
+}
+
+.goles_apuesta:focus {
+    color: #000;
+    border: 1px solid #00f;
+}
+
+.btn-primary {
+    display: block;
+    width: 100px;
+    padding: 10px 16px;
+    color: #fff;
+    background-color: #428bca;
+    margin: 0 auto;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/** Tables **/
+
+.table-box {
+    /*border: 1px solid yellow;*/
+}
+
+.table-actions {
+    /*border:1px solid red;*/
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align:center;
+}
+
+.classificacion {
+    margin:0 auto;
+    border-collapse: collapse;
+    background-color: #eee;
+}
+
+.records {
+    margin:0 auto;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: 2px solid black;
+}
+
+td  {
+    border-bottom: 1px solid black;
+}
+
+th, td {
+    padding:10px;
+}
+
+#paging > p {
+    text-align: center;
+}
+
+/* Forms */
+
+.form-box {
+
+}
+
+.rec-form * {
+    vertical-align: middle;
+}
+
+.form-label-1 {
+    width:130px;
+    display:inline-block;
+}
+
+.form-label-2 {
+    /*width:130px;*/
+    display:inline-block;
+}
+
+.form-legend-1{
+    font-weight:bold;
+}
+
+.txt-field-1 {
+    width:400px;
+}
+
+.txt-field-2 {
+    width:100px;
+}
+
+.txt-field-3 {
+    width:418px;
+}
+
+/* datepicker */
+
+.ui-datepicker {
+    /*width:100px;*/
+    font-size:12px;
+}
+
+.goles {
+    width:25px;
+}
+
+#fecha_partido {
+    width: 100px;
+}
+
+

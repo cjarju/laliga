@@ -1,0 +1,57 @@
+Select count(*) pj
+from partidos where equipo_local_id = 1 or equipo_away_id = 1
+and (goles_equipo_local is not null)
+
+select sum(gf_home) gf, sum(gc_home) gc from 
+(
+Select sum(goles_equipo_local) gf_home, sum(goles_equipo_away) gc_home
+from partidos where equipo_local_id = 1 
+and (goles_equipo_local is not null)
+union all
+Select sum(goles_equipo_away) gf_away, sum(goles_equipo_local) gc_away 
+from partidos where equipo_away_id = 1 
+and (goles_equipo_away is not null)
+) goles
+
+
+select sum(pg_home) pg from 
+(
+Select count(*) pg_home 
+from partidos where equipo_local_id = 1
+and goles_equipo_local is not null and (goles_equipo_local > goles_equipo_away)
+union all
+Select count(*) pg_away
+from partidos where equipo_away_id = 1
+and goles_equipo_away is not null and (goles_equipo_away > goles_equipo_local)
+) ganados
+
+select sum(pp_home) pp 
+from (
+Select count(*) pp_home 
+from partidos where equipo_local_id = 1
+and goles_equipo_local is not null and (goles_equipo_away > goles_equipo_local)
+union all
+Select count(*) pp_away
+from partidos where equipo_away_id = 1
+and goles_equipo_away is not null and (goles_equipo_local > goles_equipo_away)
+) perdidos
+
+
+Select count(*) pe
+from partidos where (equipo_local_id = 1 or equipo_away_id = 1)
+and goles_equipo_local is not null and (goles_equipo_local = goles_equipo_away)
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 

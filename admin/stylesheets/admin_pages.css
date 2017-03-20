@@ -1,0 +1,30 @@
+/* specific css that apply to admin pages  */
+
+body {
+
+    background-color: #eee;
+    background-image: none;
+}
+
+.user-info-sect  > span, .footer {
+    color: #333;
+}
+
+.btn-primary {
+    padding: 5px 8px;
+}
+
+fieldset {
+    border-radius: 6px;
+}
+
+form input[type='text'], form textarea, form select {
+    color: #555;
+    border: 1px solid #00bfff;
+    border-radius: 4px;
+}
+
+form input[type='text']:focus, form textarea:focus, form select:focus {
+    color: #000;
+    border: 1px solid blue;
+}
